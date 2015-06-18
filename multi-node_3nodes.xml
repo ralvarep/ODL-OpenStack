@@ -33,10 +33,10 @@ SPAIN
 
 
   <!-- NET DEFINITION -->
-  <!-- virbr0 (192.168.122/24) -->
+  <!-- virbr0 (192.168.122.0/24) -->
   <net name="virbr0" mode="virtual_bridge" managed="no"/>
-  <!-- internalNet (10.0.0.0/24) -->
-  <net name="internalNet" mode="virtual_bridge" />
+  <!-- internal (10.0.0.0/24) -->
+  <net name="internal" mode="virtual_bridge"/>
 
 
   <!-- OPENDAYLIGHT NODE -->
@@ -44,7 +44,7 @@ SPAIN
     <filesystem type="cow">filesystems/devstack_odl_ovs_KILO.qcow2</filesystem>
     <mem>4G</mem>
     <if id="1" net="virbr0"/>
-    <if id="2" net="internalNet">
+    <if id="2" net="internal">
       <ipv4>10.0.0.10/24</ipv4>
     </if>
 
@@ -74,15 +74,15 @@ SPAIN
     <filesystem type="cow">filesystems/devstack_odl_ovs_KILO.qcow2</filesystem>
     <mem>4G</mem>
     <if id="1" net="virbr0"/>
-    <if id="2" net="internalNet">
+    <if id="2" net="internal">
       <ipv4>10.0.0.11/24</ipv4>
     </if>
 
-    <!-- Copy DevStack configuration (Neutron only)-->
-    <filetree seq="conf-neutron" root="/home/vnx/devstack/local.conf" perms="644">conf/neutron-only/local.conf.ctrl-comp1</filetree>
+    <!-- Copy DevStack configuration (Neutron only)--> <!--
+    <filetree seq="conf-neutron" root="/home/vnx/devstack/local.conf" perms="644">conf/neutron-only/local.conf.ctrl-comp1</filetree> -->
 
-    <!-- Copy DevStack configuration (Neutron with ODL [L2])-->
-    <filetree seq="conf-odl-l2" root="/home/vnx/devstack/local.conf" perms="644">conf/neutron-odl-l2/local.conf.ctrl-comp1</filetree>
+    <!-- Copy DevStack configuration (Neutron with ODL [L2])--> <!--
+    <filetree seq="conf-odl-l2" root="/home/vnx/devstack/local.conf" perms="644">conf/neutron-odl-l2/local.conf.ctrl-comp1</filetree> -->
 
     <!-- Copy DevStack configuration (Neutron with ODL [L2 & L3])-->
     <filetree seq="conf-odl-l3" root="/home/vnx/devstack/local.conf" perms="644">conf/neutron-odl-l3/local.conf.ctrl-comp1</filetree>
@@ -113,7 +113,7 @@ SPAIN
     <filesystem type="cow">filesystems/devstack_odl_ovs_KILO.qcow2</filesystem>
     <mem>4G</mem>
     <if id="1" net="virbr0"/>
-    <if id="2" net="internalNet">
+    <if id="2" net="internal">
       <ipv4>10.0.0.12/24</ipv4>
     </if>
 
