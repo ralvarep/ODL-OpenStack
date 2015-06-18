@@ -44,5 +44,5 @@ B) CREATE ROOTFS MANUALLY
 
 	B.X) Install others useful packages [optional]
 		
-		apt-get install xterm nano wireshark tcpdump curl htop
+		apt-get install curl htop nano tcpdump xterm wireshark
 
