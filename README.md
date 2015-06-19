@@ -48,10 +48,12 @@ $ sudo vnx -f SCENARIO_FILE.xml -x CONF_ID
 
 #### Single-node_with_externalODL
 
-##### Single-node_with_internallODL
+##### * Single-node_with_internallODL
 
 
-* Multi-node_2nodes
+###### Multi-node_2nodes
+
+
 * Multi-node_3nodes
 ![Multi-node_3nodes](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/multi-node_3nodes.jpg)
 * Multi-node_4nodes
