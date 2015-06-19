@@ -46,17 +46,21 @@ $ sudo vnx -f SCENARIO_FILE.xml -x CONF_ID
 
 ## Scenarios
 
-#### Single-node_with_externalODL
+##### Single-node_with_externalODL
 
-##### * Single-node_with_internallODL
+##### Single-node_with_internallODL
 
+##### Multi-node_2nodes
 
-###### Multi-node_2nodes
-
-
-* Multi-node_3nodes
+##### Multi-node_3nodes
+~~~
+=> odl..........(OpenDaylight node)
+=> ctrl-comp1...(Controller node *[Controller + Network + Compute1]*)
+=> comp2........(Controller node *[Compute2]*)
+~~~
 ![Multi-node_3nodes](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/multi-node_3nodes.jpg)
-* Multi-node_4nodes
+
+##### Multi-node_4nodes
 
 
 ## Author
