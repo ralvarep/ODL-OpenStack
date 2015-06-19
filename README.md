@@ -1,19 +1,18 @@
 # OpenDaylight Integration with OpenStack
-This repository provides a set of virtual scenarios to explore an OpenStack environment in which the network management is provided for OpenDaylight.
+This repository provides a set of virtual scenarios to explore an OpenStack environment in which OpenDaylight is the network management provider.
 
 Demo scenarios have been created using [Virtual Networks over linuX (VNX)](http://www.dit.upm.es/~vnx/).
 
 
 ## Requirements
 
- - VNX installed [VNX Installation Guide](http://web.dit.upm.es/vnxwiki/index.php/Vnx-install)
- - KVM-based Nested Virtualization
+ - VNX installed ([VNX Installation Guide](http://web.dit.upm.es/vnxwiki/index.php/Vnx-install))
+ - KVM-based nested virtualization
  - Free disk space: 5 GB (root filesystem size)
 
-Those scenarios have been tested in a laptop with:
-- Intel® Core™ i7-4710HQ CPU @ 2.50GHz × 8
-- 16 GB RAM
-- Ubuntu 15.04
+Those scenarios have been tested in a laptop with: Intel® Core™ i7-4710HQ CPU @ 2.50GHz × 8
+                                                   16 GB RAM
+                                                   Ubuntu 15.04
 
 ## Usage
 
