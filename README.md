@@ -6,8 +6,10 @@ Demo scenarios have been created using [Virtual Networks over linuX (VNX)](http:
 
 ## Requirements
 
- - VNX installed http://web.dit.upm.es/vnxwiki/index.php/Vnx-install
+ - VNX installed [VNX Installation Guide](http://web.dit.upm.es/vnxwiki/index.php/Vnx-install)
+ - KVM-based Nested Virtualization
 
+ - Those scenarios have been tested in a laptop with Ubuntu 15.04 with 16 GB RAM and Intel® Core™ i7-4710HQ CPU @ 2.50GHz × 8 
 
 ## Usage
 
@@ -50,35 +52,36 @@ $ sudo vnx -f SCENARIO_FILE.xml -x CONF_ID
 
 ##### Single-node_with_externalODL
 ~~~
-=> ctrl-comp1 (Controller node *[Controller + Network + Compute1]*)
+=> ctrl-comp1 (Controller node [Controller + Network + Compute])
 ~~~
 
 ##### Single-node_with_internallODL
 ~~~
-=> ctrl-comp1 (OpenDaylight & Controller node *[Controller + Network + Compute1]*)
+=> ctrl-comp1 (OpenDaylight & Controller node [Controller + Network + Compute])
 ~~~
 
 ##### Multi-node_2nodes
 ~~~
 => odl......... (OpenDaylight node)
-=> ctrl-comp1.. (Controller node *[Controller + Network + Compute1]*)
+=> ctrl-comp1.. (Controller node [Controller + Network + Compute])
 ~~~
 
 ##### Multi-node_3nodes
 ~~~
 => odl......... (OpenDaylight node)
-=> ctrl-comp1.. (Controller node *[Controller + Network + Compute1]*)
-=> comp2....... (Controller node *[Compute2]*)
+=> ctrl-comp1.. (Controller node [Controller + Network + Compute1])
+=> comp2....... (Controller node [Compute2])
 ~~~
 ![Multi-node_3nodes](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/multi-node_3nodes.jpg)
 
 ##### Multi-node_4nodes
 ~~~
 => odl......... (OpenDaylight node)
-=> ctrl-comp1.. (Controller node *[Controller + Network + Compute1]*)
-=> comp2....... (Controller node *[Compute2]*)
-=> comp3....... (Controller node *[Compute3]*)
+=> ctrl-comp1.. (Controller node [Controller + Network + Compute1])
+=> comp2....... (Controller node [Compute2])
+=> comp3....... (Controller node [Compute3])
 ~~~
+
 
 ## Author
 
