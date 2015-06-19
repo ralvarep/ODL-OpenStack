@@ -6,7 +6,7 @@ Demo scenarios have been created using [Virtual Networks over linuX (VNX)](http:
 
 ## Requirements
 
- - VNX installed ([VNX Installation Guide](http://web.dit.upm.es/vnxwiki/index.php/Vnx-install))
+ - VNX installed [(VNX Installation Guide)](http://web.dit.upm.es/vnxwiki/index.php/Vnx-install)
  - KVM-based nested virtualization
  - Free disk space: 5 GB (root filesystem size)
 
@@ -74,7 +74,7 @@ $ sudo vnx -f SCENARIO_FILE.xml -x CONF_ID
 ~~~
 => odl......... (OpenDaylight node)
 => ctrl-comp1.. (Controller node [Controller + Network + Compute1])
-=> comp2....... (Controller node [Compute2])
+=> comp2....... (Compute node [Compute2])
 ~~~
 ![Multi-node_3nodes](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/multi-node_3nodes.jpg)
 
@@ -82,8 +82,8 @@ $ sudo vnx -f SCENARIO_FILE.xml -x CONF_ID
 ~~~
 => odl......... (OpenDaylight node)
 => ctrl-comp1.. (Controller node [Controller + Network + Compute1])
-=> comp2....... (Controller node [Compute2])
-=> comp3....... (Controller node [Compute3])
+=> comp2....... (Compute node [Compute2])
+=> comp3....... (Compute node [Compute3])
 ~~~
 
 
