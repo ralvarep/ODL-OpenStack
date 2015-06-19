@@ -89,7 +89,7 @@ $ sudo vnx -f SCENARIO_FILE.xml -x CONF_ID
 
 ## Author
 
-This project has been developed by [Raúl Álvarez Pinilla](http://github.com/ralvarep) as a result of the Master's Thesis entitled *Study of Software Defined Networking through the development of virtual scenarios base on the OpenDaylight controller*.
+This project has been developed by [Raúl Álvarez Pinilla](http://github.com/ralvarep) as a result of the Master's Thesis entitled *Study of Software Defined Networking through the development of virtual scenarios based on the OpenDaylight controller*.
 
 
 ## References
