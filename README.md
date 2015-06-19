@@ -14,7 +14,7 @@ Demo scenarios have been created using [Virtual Networks over linuX (VNX)](http:
 $ git clone https://github.com/ralvarep/odl-openstack.git
 ~~~
 
-**STEP 2: Build root filesystem **(Read *filesystems/00-README.txt*)
+**STEP 2: Build root filesystem ** (Read *filesystems/00-README.txt*)
 ~~~
 $ filesystems/download-rootfs.sh
 ~~~
@@ -46,8 +46,12 @@ $ sudo vnx -f SCENARIO_FILE.xml -x CONF_ID
 
 ## Scenarios
 
+* Single-node_with_externalODL
+* Single-node_with_internallODL
+* Multi-node_2nodes
 * Multi-node_3nodes
 ![Multi-node_3nodes](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/multi-node_3nodes.jpg)
+* Multi-node_4nodes
 
 
 ## Author
@@ -56,3 +60,4 @@ This project has been developed by [Raúl Álvarez Pinilla](http://github.com/ra
 
 
 ## References
+
