@@ -42,7 +42,7 @@ CONF_ID ===> start-neutron
 
 ## Scenarios
 
-### *Multi-node_3nodes
+### * Multi-node_3nodes
 ![Multi-node_3nodes](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/multi-node_3nodes.jpg)
 
 
