@@ -11,9 +11,9 @@ Demo scenarios have been created using [Virtual Networks over linuX (VNX)](http:
  - Free disk space: 5 GB (root filesystem size)
 
 Those scenarios have been tested in a laptop with:
-    - Intel® Core™ i7-4710HQ CPU @ 2.50GHz × 8
-    - 16 GB RAM
-    - Ubuntu 15.04
+ - Intel® Core™ i7-4710HQ CPU @ 2.50GHz × 8
+ - 16 GB RAM
+ - Ubuntu 15.04
 
 ## Usage
 
