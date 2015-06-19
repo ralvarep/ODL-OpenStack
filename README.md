@@ -8,8 +8,12 @@ Demo scenarios have been created using [Virtual Networks over linuX (VNX)](http:
 
  - VNX installed [VNX Installation Guide](http://web.dit.upm.es/vnxwiki/index.php/Vnx-install)
  - KVM-based Nested Virtualization
+ - Free disk space: 5 GB (root filesystem size)
 
- - Those scenarios have been tested in a laptop with Ubuntu 15.04 with 16 GB RAM and Intel® Core™ i7-4710HQ CPU @ 2.50GHz × 8 
+Those scenarios have been tested in a laptop with:
+- Intel® Core™ i7-4710HQ CPU @ 2.50GHz × 8
+- 16 GB RAM
+- Ubuntu 15.04
 
 ## Usage
 
