@@ -7,7 +7,7 @@ There are two options for building the necessary root filesystem to start the vi
 
 A) DOWNLOAD ROOTFS (with everything necessary)
 
-	wget ...
+	wget ... [https://drive.google.com/open?id=0B8JdNNTKyZPgcThvbmtRS0dOaWc&authuser=0]
 
 
 B) CREATE ROOTFS MANUALLY
