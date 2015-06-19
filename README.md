@@ -3,9 +3,11 @@ This repository provides a set of virtual scenarios to explore an OpenStack envi
 
 Demo scenarios have been created using [Virtual Networks over linuX (VNX)](http://www.dit.upm.es/~vnx/).
 
+
 ## Requirements
 
  - VNX installed http://web.dit.upm.es/vnxwiki/index.php/Vnx-install
+
 
 ## Usage
 
@@ -14,7 +16,7 @@ Demo scenarios have been created using [Virtual Networks over linuX (VNX)](http:
 $ git clone https://github.com/ralvarep/odl-openstack.git
 ~~~
 
-**STEP 2: Build root filesystem ** (Read filesystems/00-README.txt)
+**STEP 2: Build root filesystem** (Read filesystems/00-README.txt)
 ~~~
 $ filesystems/download-rootfs.sh
 ~~~
@@ -25,11 +27,11 @@ There are several scenarios in which you can interact. To create them:
 ~~~
 $ sudo vnx -f SCENARIO_FILE.xml -t
 
-  SCENARIO_FILE ===> single-node_with_externalODL
-                ===> single-node_with_internalODL
-                ===> multi-node_2nodes
-                ===> multi-node_3nodes
-                ===> multi-node_4nodes
+ SCENARIO_FILE ===> single-node_with_externalODL
+               ===> single-node_with_internalODL
+               ===> multi-node_2nodes
+               ===> multi-node_3nodes
+               ===> multi-node_4nodes
 ~~~
 
 **STEP 4: Start virtual scenario**
@@ -38,30 +40,45 @@ The virtual scenarios can be started with different configurations. When the sce
 ~~~
 $ sudo vnx -f SCENARIO_FILE.xml -x CONF_ID
 
-  CONF_ID ===> start-neutron (Only start Neutron, without OpenDaylight)
-          ===> start-odl-l2  (Start Neutron with OpenDaylight. L2 services enabled)
-          ===> start-odl-l3  (Start Neutron with OpenDaylight. L2 & L3 services enabled)
-          ===> stop          (Stop DevStack and OpenDaylight)
+ CONF_ID ===> start-neutron (Only start Neutron, without OpenDaylight)
+         ===> start-odl-l2  (Start Neutron with OpenDaylight. L2 services enabled)
+         ===> start-odl-l3  (Start Neutron with OpenDaylight. L2 & L3 services enabled)
+         ===> stop          (Stop DevStack and OpenDaylight)
 ~~~
 
 ## Scenarios
 
 ##### Single-node_with_externalODL
+~~~
+=> ctrl-comp1 (Controller node *[Controller + Network + Compute1]*)
+~~~
 
 ##### Single-node_with_internallODL
+~~~
+=> ctrl-comp1 (OpenDaylight & Controller node *[Controller + Network + Compute1]*)
+~~~
 
 ##### Multi-node_2nodes
+~~~
+=> odl......... (OpenDaylight node)
+=> ctrl-comp1.. (Controller node *[Controller + Network + Compute1]*)
+~~~
 
 ##### Multi-node_3nodes
 ~~~
-=> odl..........(OpenDaylight node)
-=> ctrl-comp1...(Controller node *[Controller + Network + Compute1]*)
-=> comp2........(Controller node *[Compute2]*)
+=> odl......... (OpenDaylight node)
+=> ctrl-comp1.. (Controller node *[Controller + Network + Compute1]*)
+=> comp2....... (Controller node *[Compute2]*)
 ~~~
 ![Multi-node_3nodes](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/multi-node_3nodes.jpg)
 
 ##### Multi-node_4nodes
-
+~~~
+=> odl......... (OpenDaylight node)
+=> ctrl-comp1.. (Controller node *[Controller + Network + Compute1]*)
+=> comp2....... (Controller node *[Compute2]*)
+=> comp3....... (Controller node *[Compute3]*)
+~~~
 
 ## Author
 
