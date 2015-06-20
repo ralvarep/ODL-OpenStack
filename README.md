@@ -7,7 +7,7 @@ Index:
 - [Requirements](https://github.com/ralvarep/odl-openstack#scenarios)
 - [Usage](https://github.com/ralvarep/odl-openstack#usage)
 - [Scenarios](https://github.com/ralvarep/odl-openstack#scenarios)
-- [Example topologies in OpenStack](https://github.com/ralvarep/odl-openstack#create-example-topologies-in-openstack)
+- [Example topologies in OpenStack](https://github.com/ralvarep/odl-openstack#example-topologies-in-openstack)
 - [Notes](https://github.com/ralvarep/odl-openstack#notes)
 - [Author](https://github.com/ralvarep/odl-openstack#author)
 - [References](https://github.com/ralvarep/odl-openstack#references)
