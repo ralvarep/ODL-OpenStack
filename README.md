@@ -52,7 +52,7 @@ $ sudo vnx -f SCENARIO_FILE.xml -x CONF_TAG --h2vm-timeout 0
 ~~~
 This step takes several minutes, about 5-10 min (depending on the chosen configuration and host computing capacity).
 
-Finally, the following message will be showed...:
+Finally, the following message will be showed...
 ~~~
 This is your host ip: 10.0.0.11
 Horizon is now available at http://10.0.0.11/
@@ -123,6 +123,11 @@ $ sudo vnx -f SCENARIO_FILE.xml -x TAG
 => comp2....... (Compute node [Compute2])
 => comp3....... (Compute node [Compute3])
 ~~~
+
+
+## Create example topologies in OpenStack
+
+
 
 ## Notes
 
