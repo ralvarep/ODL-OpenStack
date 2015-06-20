@@ -33,23 +33,53 @@ There are several scenarios in which you can interact. To create them:
 ~~~
 $ sudo vnx -f SCENARIO_FILE.xml -t
 
- SCENARIO_FILE ===> single-node_with_externalODL
-               ===> single-node_with_internalODL
-               ===> multi-node_2nodes
-               ===> multi-node_3nodes
-               ===> multi-node_4nodes
+ SCENARIO_FILE => single-node_with_externalODL
+               => single-node_with_internalODL
+               => multi-node_2nodes
+               => multi-node_3nodes
+               => multi-node_4nodes
 ~~~
 
 **STEP 4: Start virtual scenario**
 
-The virtual scenarios can be started with different configurations. When the scenario is created, run:
-~~~
-$ sudo vnx -f SCENARIO_FILE.xml -x CONF_ID
+The virtual scenarios can be started with different configurations. For this, it is automatically loaded the appropriate configuration in DevStack nodes.
 
- CONF_ID ===> start-neutron (Only start Neutron, without OpenDaylight)
-         ===> start-odl-l2  (Start Neutron with OpenDaylight. L2 services enabled)
-         ===> start-odl-l3  (Start Neutron with OpenDaylight. L2 & L3 services enabled)
-         ===> stop          (Stop DevStack and OpenDaylight)
+When the scenario is created, run:
+~~~
+$ sudo vnx -f SCENARIO_FILE.xml -x CONF_TAG
+
+ CONF_TAG => start-no-odl  (Start DevStack, without OpenDaylight)
+          => start-odl-l2  (Start DevStack with OpenDaylight. L2 services enabled)
+          => start-odl-l3  (Start DevStack with OpenDaylight. L2 & L3 services enabled)
+~~~
+This step takes several minutes, about 5-10 min (depending on the chosen configuration and host computing capacity).
+
+**OTHER OPTIONS**
+
+* Stop DevStack and OpenDaylight
+~~~
+$ sudo vnx -f SCENARIO_FILE.xml -x stop
+~~~
+* Shutdown scenario
+~~~
+$ sudo vnx -f SCENARIO_FILE.xml --shutdown
+~~~
+* Start scenario that has previously been shutdown
+~~~
+$ sudo vnx -f SCENARIO_FILE.xml --start
+~~~
+* Destroy scenario
+~~~
+$ sudo vnx -f SCENARIO_FILE.xml -P
+~~~
+* Other useful tags to be executed
+~~~
+$ sudo vnx -f SCENARIO_FILE.xml -x TAG
+
+ TAG => stack     (Execute stack.sh)
+     => unstack   (Execute unstack.sh)
+     => start-odl (Start OpenDaylight)
+     => stop-odl  (Stop OpenDaylight)
 ~~~
 
 ## Scenarios
@@ -85,6 +115,11 @@ $ sudo vnx -f SCENARIO_FILE.xml -x CONF_ID
 => comp2....... (Compute node [Compute2])
 => comp3....... (Compute node [Compute3])
 ~~~
+
+## Notes
+
+* virbr0
+* 8 cpu 16 RAM
 
 
 ## Author
