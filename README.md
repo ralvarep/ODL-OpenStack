@@ -98,6 +98,11 @@ $ sudo vnx -f SCENARIO_FILE.xml -x TAG
      => start-odl (Start OpenDaylight)
      => stop-odl  (Stop OpenDaylight)
 ~~~
+* To resize consoles, execute in each VM:
+~~~
+$ resize
+~~~
+
 
 ## Scenarios
 
