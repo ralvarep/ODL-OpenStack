@@ -19,6 +19,8 @@ $ git clone https://github.com/ralvarep/odl-openstack.git
 ~~~
 
 **STEP 2: Build root filesystem** (Read filesystems/00-README.txt)
+
+Virtual scenarios have been configured using filesystems in [copy-on-write (COW)](https://en.wikipedia.org/wiki/Copy-on-write) mode. This allows you to use a single filesystem for all virtual machines, thereby optimizing the disk space occupied.
 ~~~
 $ filesystems/download-rootfs.sh
 ~~~
