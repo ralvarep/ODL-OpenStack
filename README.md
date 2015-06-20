@@ -50,7 +50,7 @@ $ sudo vnx -f SCENARIO_FILE.xml -x CONF_TAG
 ~~~
 This step takes several minutes, about 5-10 min (depending on the chosen configuration and host computing capacity).
 
-**OTHER OPTIONS**
+**OTHER OPTIONS:**
 
 * Stop DevStack and OpenDaylight
 ~~~
