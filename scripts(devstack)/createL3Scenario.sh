@@ -17,7 +17,7 @@ neutron router-create R1 --tenant-id $TENANT_ID
 neutron router-interface-add R1 subnet1
 neutron router-interface-add R1 subnet2
 
-nova boot VM1-NET1 --poll --flavor m1.nano --image $IMAGE_ID --nic net-id=${NET1_ID} --availability-zone nova:ctrl-comp1
-nova boot VM2-NET1 --poll --flavor m1.nano --image $IMAGE_ID --nic net-id=${NET1_ID} --availability-zone nova:comp2
-nova boot VM1-NET2 --poll --flavor m1.nano --image $IMAGE_ID --nic net-id=${NET2_ID} --availability-zone nova:ctrl-comp1
-nova boot VM2-NET2 --poll --flavor m1.nano --image $IMAGE_ID --nic net-id=${NET2_ID} --availability-zone nova:comp2
+nova boot VM1-NET1 --poll --flavor m1.tiny --image $IMAGE_ID --nic net-id=${NET1_ID} --availability-zone nova:ctrl-comp1
+nova boot VM2-NET1 --poll --flavor m1.tiny --image $IMAGE_ID --nic net-id=${NET1_ID} --availability-zone nova:comp2
+nova boot VM1-NET2 --poll --flavor m1.tiny --image $IMAGE_ID --nic net-id=${NET2_ID} --availability-zone nova:ctrl-comp1
+nova boot VM2-NET2 --poll --flavor m1.tiny --image $IMAGE_ID --nic net-id=${NET2_ID} --availability-zone nova:comp2
