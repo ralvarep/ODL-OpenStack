@@ -103,7 +103,7 @@ SPAIN
 
     <!-- Stop DevStack -->
     <exec seq="unstack" type="verbatim" ostype="system">
-    	 su vnx -c "/home/vnx/devstack/stack.sh > /dev/ttyS0";
+    	 su vnx -c "/home/vnx/devstack/unstack.sh > /dev/ttyS0";
     </exec>
   </vm>
 
@@ -136,7 +136,7 @@ SPAIN
 
     <!-- Stop DevStack -->
     <exec seq="unstack" type="verbatim" ostype="system">
-    	 su vnx -c "/home/vnx/devstack/stack.sh > /dev/ttyS0";
+    	 su vnx -c "/home/vnx/devstack/unstack.sh > /dev/ttyS0";
     </exec>
   </vm>
 
