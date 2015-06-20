@@ -118,7 +118,7 @@ $ sudo vnx -f SCENARIO_FILE.xml -x TAG
 
 * The XML templates of virtual scenarios *(SCENARIO_FILE.xml)* have been configured for a host with 8 VCPU and 16 GB RAM. If you have less memory and computing resources, these values can be changed in the definitions of virtual machines.
 
-* In these scenarios it has been used [virbr0 network](http://wiki.libvirt.org/page/VirtualNetworking), which is provided by default by libvirt. If you are using other libvirt network, change *192.168.122.X* for you network IP in *SCENARIO_FILE.xml* files and *local.conf* located under *conf* folder.
+* It has been used [virbr0 network](http://wiki.libvirt.org/page/VirtualNetworking) in these scenarios, which is provided by default by libvirt. If you are using other libvirt network, change *192.168.122.X* for you network IP in *SCENARIO_FILE.xml* files and *local.conf* located under *conf* folder.
 
 
 ## Author
