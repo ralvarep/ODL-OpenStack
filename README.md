@@ -121,7 +121,7 @@ $ sudo vnx -f SCENARIO_FILE.xml -x TAG
 
 ## Author
 
-This project has been developed by [Raúl Álvarez Pinilla](http://github.com/ralvarep) as a result of the Master's Thesis entitled *Study of Software Defined Networking through the development of virtual scenarios based on the OpenDaylight controller*.
+This project has been developed by [Raúl Álvarez Pinilla](http://github.com/ralvarep) as a result of the Master's Thesis entitled *Study of Software Defined Networking through the development of virtual scenarios based on the OpenDaylight controller* in [Telematics Engineering Department (DIT)](http://www.dit.upm.es) of the [Technical University of Madrid (UPM)](http://www.upm.es/)..
 
 
 ## References
