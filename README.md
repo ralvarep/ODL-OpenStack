@@ -42,9 +42,9 @@ $ sudo vnx -f SCENARIO_FILE.xml -t
 
 The virtual scenarios can be started with different configurations. For this, it is automatically loaded the appropriate configuration in DevStack nodes.
 
-When the scenario is created, login to consoles with vnx:xxxx, and then run:
+When the scenario is created, login to consoles with vnx:xxxx, and then run in the host:
 ~~~
-$ sudo vnx -f SCENARIO_FILE.xml -x CONF_TAG
+$ sudo vnx -f SCENARIO_FILE.xml -x CONF_TAG --h2vm-timeout 0
 
  CONF_TAG => start-no-odl  (Start DevStack, without OpenDaylight)
           => start-odl-l2  (Start DevStack with OpenDaylight [L2 services])
