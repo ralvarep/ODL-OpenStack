@@ -9,11 +9,7 @@ Demo scenarios have been created using [Virtual Networks over linuX (VNX)](http:
  - VNX installed [(VNX Installation Guide)](http://web.dit.upm.es/vnxwiki/index.php/Vnx-install)
  - KVM-based nested virtualization
  - Free disk space: 5 GB (root filesystem size)
-
-Those scenarios have been tested in a laptop with:
- - Intel® Core™ i7-4710HQ CPU @ 2.50GHz × 8
- - 16 GB RAM
- - Ubuntu 15.04
+ - 4GB or more of RAM.
 
 ## Usage
 
@@ -29,7 +25,7 @@ $ filesystems/download-rootfs.sh
 
 **STEP 3: Create virtual scenario**
 
-There are several scenarios in which you can interact. To create them:
+There are [several scenarios](https://github.com/ralvarep/odl-openstack#scenarios) in which you can interact. To create them:
 ~~~
 $ sudo vnx -f SCENARIO_FILE.xml -t
 
@@ -49,8 +45,8 @@ When the scenario is created, run:
 $ sudo vnx -f SCENARIO_FILE.xml -x CONF_TAG
 
  CONF_TAG => start-no-odl  (Start DevStack, without OpenDaylight)
-          => start-odl-l2  (Start DevStack with OpenDaylight. L2 services enabled)
-          => start-odl-l3  (Start DevStack with OpenDaylight. L2 & L3 services enabled)
+          => start-odl-l2  (Start DevStack with OpenDaylight [L2 services])
+          => start-odl-l3  (Start DevStack with OpenDaylight [L2 & L3 services])
 ~~~
 This step takes several minutes, about 5-10 min (depending on the chosen configuration and host computing capacity).
 
