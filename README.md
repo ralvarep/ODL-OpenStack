@@ -42,7 +42,7 @@ $ sudo vnx -f SCENARIO_FILE.xml -t
 
 The virtual scenarios can be started with different configurations. For this, it is automatically loaded the appropriate configuration in DevStack nodes.
 
-When the scenario is created, run:
+When the scenario is created, login to consoles with vnx:xxxx, and then run:
 ~~~
 $ sudo vnx -f SCENARIO_FILE.xml -x CONF_TAG
 
