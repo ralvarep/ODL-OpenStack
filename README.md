@@ -3,6 +3,15 @@ This repository provides a set of virtual scenarios to explore an OpenStack envi
 
 Demo scenarios have been created using [Virtual Networks over linuX (VNX)](http://www.dit.upm.es/~vnx/).
 
+Index:
+- [Requirements](https://github.com/ralvarep/odl-openstack#scenarios)
+- [Usage](https://github.com/ralvarep/odl-openstack#usage)
+- [Scenarios](https://github.com/ralvarep/odl-openstack#scenarios)
+- [Example topologies in OpenStack](https://github.com/ralvarep/odl-openstack#create-example-topologies-in-openstack)
+- [Notes](https://github.com/ralvarep/odl-openstack#notes)
+- [Author](https://github.com/ralvarep/odl-openstack#author)
+- [References](https://github.com/ralvarep/odl-openstack#references)
+
 
 ## Requirements
 
@@ -125,7 +134,7 @@ $ sudo vnx -f SCENARIO_FILE.xml -x TAG
 ~~~
 
 
-## Create example topologies in OpenStack
+## Example topologies in OpenStack
 
 
 
