@@ -25,9 +25,9 @@ SPAIN
         <console id="0" display="no"/>
         <console id="1" display="yes"/>
     </vm_defaults>
-    <cmd-seq seq='start-neutron'>conf-neutron,stack,start-odl</cmd-seq>
-    <cmd-seq seq='start-odl-l2'>conf-odl-l2,stack,start-odl</cmd-seq>
-    <cmd-seq seq='start-odl-l3'>conf-odl-l3,stack,start-odl</cmd-seq>
+    <cmd-seq seq='start-neutron'>start-odl,conf-neutron,stack</cmd-seq>
+    <cmd-seq seq='start-odl-l2'>start-odl,conf-odl-l2,stack</cmd-seq>
+    <cmd-seq seq='start-odl-l3'>start-odl,conf-odl-l3,stack</cmd-seq>
     <cmd-seq seq='stop'>unstack,stop-odl</cmd-seq>
   </global>
 
@@ -117,6 +117,9 @@ SPAIN
       <ipv4>10.0.0.12/24</ipv4>
     </if>
 
+    <!-- Copy DevStack configuration (Neutron with ODL [L2 & L3])-->
+    <filetree seq="conf-odl-l3" root="/home/vnx/devstack/local.conf" perms="644">conf/neutron-odl-l3/local.conf.comp2</filetree>
+
     <!-- DHCP configuration for eth1 -->
     <exec seq="on_boot" type="verbatim" ostype="system">
          sleep 10;
@@ -124,6 +127,16 @@ SPAIN
          sed -i '$a send dhcp-requested-address 192.168.122.12;}' /etc/dhcp/dhclient.conf;
          dhclient eth1;
          chmod 644 /etc/resolv.conf;
+    </exec>
+
+    <!-- Start DevStack -->
+    <exec seq="stack" type="verbatim" ostype="system">
+    	 su vnx -c "/home/vnx/devstack/stack.sh > /dev/ttyS0";
+    </exec>
+
+    <!-- Stop DevStack -->
+    <exec seq="unstack" type="verbatim" ostype="system">
+    	 su vnx -c "/home/vnx/devstack/stack.sh > /dev/ttyS0";
     </exec>
   </vm>
 
