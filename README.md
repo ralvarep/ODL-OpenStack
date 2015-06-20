@@ -12,7 +12,7 @@ Index:
 - [Author](https://github.com/ralvarep/odl-openstack#author)
 - [References](https://github.com/ralvarep/odl-openstack#references)
 
-![OpenDaylight & OpenStack](hhttps://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/odl-openstack.jpg)
+![OpenDaylight & OpenStack](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/odl-openstack.jpg)
 
 
 ## Requirements
