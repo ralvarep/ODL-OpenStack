@@ -1,8 +1,8 @@
 [[local|localrc]]
 
 # Prevent refreshing of dependencies and DevStack recloning
-#OFFLINE=True
-#RECLONE=No
+OFFLINE=True
+RECLONE=No
 
 # Destination path for installation
 DEST=/opt/stack
