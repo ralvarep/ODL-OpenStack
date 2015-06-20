@@ -52,6 +52,16 @@ $ sudo vnx -f SCENARIO_FILE.xml -x CONF_TAG --h2vm-timeout 0
 ~~~
 This step takes several minutes, about 5-10 min (depending on the chosen configuration and host computing capacity).
 
+Finally, the following message will be showed...:
+~~~
+This is your host ip: 10.0.0.11
+Horizon is now available at http://10.0.0.11/
+Keystone is serving at http://10.0.0.11:5000/
+The default users are: admin and demo
+The password: password
+~~~
+...and you can test OpenDaylight and OpenStack ☺
+
 **OTHER OPTIONS:**
 
 * Stop DevStack and OpenDaylight
