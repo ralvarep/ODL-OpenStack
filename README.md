@@ -3,6 +3,15 @@ This repository provides a set of virtual scenarios to explore an OpenStack envi
 
 Demo scenarios have been created using [Virtual Networks over linuX (VNX)](http://www.dit.upm.es/~vnx/).
 
+Index:
+- [Requirements](https://github.com/ralvarep/odl-openstack#scenarios)
+- [Usage](https://github.com/ralvarep/odl-openstack#usage)
+- [Scenarios](https://github.com/ralvarep/odl-openstack#scenarios)
+- [Example topologies in OpenStack](https://github.com/ralvarep/odl-openstack#example-topologies-in-openstack)
+- [Notes](https://github.com/ralvarep/odl-openstack#notes)
+- [Author](https://github.com/ralvarep/odl-openstack#author)
+- [References](https://github.com/ralvarep/odl-openstack#references)
+
 
 ## Requirements
 
@@ -42,15 +51,25 @@ $ sudo vnx -f SCENARIO_FILE.xml -t
 
 The virtual scenarios can be started with different configurations. For this, it is automatically loaded the appropriate configuration in DevStack nodes.
 
-When the scenario is created, run:
+When the scenario is created, login to consoles with vnx:xxxx, and then run in the host:
 ~~~
-$ sudo vnx -f SCENARIO_FILE.xml -x CONF_TAG
+$ sudo vnx -f SCENARIO_FILE.xml -x CONF_TAG --h2vm-timeout 0
 
  CONF_TAG => start-no-odl  (Start DevStack, without OpenDaylight)
           => start-odl-l2  (Start DevStack with OpenDaylight [L2 services])
           => start-odl-l3  (Start DevStack with OpenDaylight [L2 & L3 services])
 ~~~
 This step takes several minutes, about 5-10 min (depending on the chosen configuration and host computing capacity).
+
+Finally, the following message will be showed...
+~~~
+This is your host ip: 10.0.0.11
+Horizon is now available at http://10.0.0.11/
+Keystone is serving at http://10.0.0.11:5000/
+The default users are: admin and demo
+The password: password
+~~~
+...and you can test OpenDaylight and OpenStack ☺
 
 **OTHER OPTIONS:**
 
@@ -79,6 +98,11 @@ $ sudo vnx -f SCENARIO_FILE.xml -x TAG
      => start-odl (Start OpenDaylight)
      => stop-odl  (Stop OpenDaylight)
 ~~~
+* To resize consoles, execute in each VM:
+~~~
+$ resize
+~~~
+
 
 ## Scenarios
 
@@ -113,6 +137,11 @@ $ sudo vnx -f SCENARIO_FILE.xml -x TAG
 => comp2....... (Compute node [Compute2])
 => comp3....... (Compute node [Compute3])
 ~~~
+
+
+## Example topologies in OpenStack
+
+
 
 ## Notes
 
