@@ -140,4 +140,37 @@ SPAIN
     </exec>
   </vm>
 
+
+  <!-- COMPUTE NODE (Compute3)-->
+  <vm name="comp3" type="libvirt" subtype="kvm" os="linux" exec_mode="sdisk" arch="x86_64" vcpu="8">
+    <filesystem type="cow">filesystems/devstack_odl_ovs_KILO.qcow2</filesystem>
+    <mem>2G</mem>
+    <if id="1" net="virbr0"/>
+    <if id="2" net="internal">
+      <ipv4>10.0.0.13/24</ipv4>
+    </if>
+
+    <!-- Copy DevStack configuration (DevStack with OpenDaylight [L2 & L3 services])-->
+    <filetree seq="conf-odl-l3" root="/home/vnx/devstack/local.conf" perms="644">conf/odl-l3/local.conf.comp3</filetree>
+
+    <!-- DHCP configuration for eth1 -->
+    <exec seq="on_boot" type="verbatim" ostype="system">
+         sleep 10;
+         sed -i '$a interface "eth1" {' /etc/dhcp/dhclient.conf;
+         sed -i '$a send dhcp-requested-address 192.168.122.13;}' /etc/dhcp/dhclient.conf;
+         dhclient eth1;
+         chmod 644 /etc/resolv.conf;
+    </exec>
+
+    <!-- Start DevStack -->
+    <exec seq="stack" type="verbatim" ostype="system">
+    	 su vnx -c "/home/vnx/devstack/stack.sh > /dev/ttyS0";
+    </exec>
+
+    <!-- Stop DevStack -->
+    <exec seq="unstack" type="verbatim" ostype="system">
+    	 su vnx -c "/home/vnx/devstack/unstack.sh > /dev/ttyS0";
+    </exec>
+  </vm>
+
 </vnx>

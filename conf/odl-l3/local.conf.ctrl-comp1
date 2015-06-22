@@ -38,8 +38,9 @@ ENABLED_SERVICES+=,q-svc,q-dhcp,q-meta
 #IMAGE_URLS="http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-uec.tar.gz"
 
 # VNC Server
-VNCSERVER_PROXYCLIENT_ADDRESS=192.168.122.11
+VNCSERVER_PROXYCLIENT_ADDRESS=$HOST_IP
 VNCSERVER_LISTEN=0.0.0.0
+NOVNCPROXY_URL="http://192.168.122.11:6080/vnc_auto.html"
 
 # Public Network
 FLOATING_RANGE=192.168.122.0/24
@@ -55,7 +56,6 @@ enable_plugin networking-odl https://github.com/flavio-fernandes/networking-odl 
 
 # OpenDaylight
 ODL_MODE=externalodl
-#ODL_MODE=compute
 ODL_MGR_IP=10.0.0.10
 ODL_MGR_PORT=6640
 ODL_USERNAME=admin

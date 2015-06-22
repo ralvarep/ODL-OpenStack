@@ -20,18 +20,19 @@ SERVICE_PASSWORD=$ADMIN_PASSWORD
 SERVICE_TOKEN=token
 
 # IP Details
-HOST_IP=10.0.0.12
-HOST_NAME=comp2
+HOST_IP=10.0.0.13
+HOST_NAME=comp3
 SERVICE_HOST=10.0.0.11
 SERVICE_HOST_NAME=ctrl-comp1
 
 # Services
 disable_all_services
-ENABLED_SERVICES=n-cpu,rabbit
+ENABLED_SERVICES=n-cpu,n-novnc,rabbit
 
 # VNC Server
 VNCSERVER_PROXYCLIENT_ADDRESS=$HOST_IP
 VNCSERVER_LISTEN=0.0.0.0
+NOVNCPROXY_URL="http://192.168.122.11:6080/vnc_auto.html"
 
 # Neutron
 Q_PLUGIN=ml2
@@ -40,7 +41,6 @@ Q_ML2_TENANT_NETWORK_TYPE=gre,vxlan
 enable_plugin networking-odl https://github.com/stackforge/networking-odl
 
 # OpenDaylight
-#ODL_MODE=externalodl
 ODL_MODE=compute
 ODL_MGR_IP=10.0.0.10
 ODL_MGR_PORT=6640
