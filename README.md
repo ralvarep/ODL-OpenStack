@@ -19,8 +19,8 @@ Index:
 
  - VNX installed [(VNX Installation Guide)](http://web.dit.upm.es/vnxwiki/index.php/Vnx-install)
  - KVM-based nested virtualization
- - Free disk space: 5 GB (root filesystem size)
- - 4GB or more of RAM.
+ - Hard Drive: 5 GB avaible space (Filesystem size)
+ - Memory: 4 GB RAM or more
 
 ## Usage
 
@@ -29,7 +29,7 @@ Index:
 $ git clone https://github.com/ralvarep/odl-openstack.git
 ~~~
 
-**STEP 2: Build root filesystem** (Read filesystems/00-README.txt)
+**STEP 2: Build filesystem** (Read filesystems/00-README.txt)
 
 Virtual scenarios have been configured using filesystems in [copy-on-write (COW) mode](https://en.wikipedia.org/wiki/Copy-on-write). This allows you to use a single filesystem for all virtual machines, thereby optimizing the disk space occupied.
 ~~~
@@ -148,7 +148,7 @@ $ resize
 
 ## Author
 
-This project has been developed by [Raúl Álvarez Pinilla](http://github.com/ralvarep) as a result of the Master's Thesis entitled *"Study of Software Defined Networking through the development of virtual scenarios based on the OpenDaylight controller"* in [Telematics Engineering Department (DIT)](http://www.dit.upm.es) of the [Technical University of Madrid (UPM)](http://www.upm.es/).
+This project has been developed by [Raúl Álvarez Pinilla](https://es.linkedin.com/in/raulalvarezpinilla) as a result of the Master's Thesis entitled *"Study of Software Defined Networking through the development of virtual scenarios based on the OpenDaylight controller"* in [Telematics Engineering Department (DIT)](http://www.dit.upm.es) of the [Technical University of Madrid (UPM)](http://www.upm.es/).
 
 
 ## References
