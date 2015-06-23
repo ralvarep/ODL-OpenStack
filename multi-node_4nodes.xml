@@ -87,6 +87,9 @@ SPAIN
     <!-- Copy DevStack configuration (DevStack with OpenDaylight [L2 & L3 services])-->
     <filetree seq="conf-odl-l3" root="/home/vnx/devstack/local.conf" perms="644">conf/odl-l3/local.conf.ctrl-comp1</filetree>
 
+    <!-- Copy DevStack L3 Scenario -->
+    <filetree seq="create-l3" root="/home/vnx/devstack/scripts" perms="644">scripts(devstack)/createL3Scenario(multi-node_4nodes).sh</filetree>
+
     <!-- DHCP configuration for eth1 -->
     <exec seq="on_boot" type="verbatim" ostype="system">
     	 sleep 10;
@@ -104,6 +107,11 @@ SPAIN
     <!-- Stop DevStack -->
     <exec seq="unstack" type="verbatim" ostype="system">
     	 su vnx -c "/home/vnx/devstack/unstack.sh > /dev/ttyS0";
+    </exec>
+
+    <!-- Create DevStack L3 Scenario-->
+    <exec seq="create-l3" type="verbatim" ostype="system">
+    	 /home/vnx/devstack/scripts/createL3Scenario(multi-node_4nodes).sh > /dev/ttyS0;
     </exec>
   </vm>
 
