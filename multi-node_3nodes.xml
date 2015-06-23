@@ -59,11 +59,13 @@ SPAIN
 
     <!-- Start OpenDaylight -->
     <exec seq="start-odl" type="verbatim" ostype="system">
+    	 echo "\nStarting OpenDaylight..." > /dev/ttyS0;
     	 /home/vnx/opendaylight/distribution-karaf-0.2.4-SNAPSHOT/bin/start;
     </exec>
 
     <!-- Stop OpenDaylight -->
     <exec seq="stop-odl" type="verbatim" ostype="system">
+    	 echo "\nStopping OpenDaylight..." > /dev/ttyS0;
     	 /home/vnx/opendaylight/distribution-karaf-0.2.4-SNAPSHOT/bin/stop;
     </exec>
   </vm>
