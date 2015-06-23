@@ -111,12 +111,14 @@ $ resize
 ~~~
 => ctrl-comp1 (Controller node [Controller + Network + Compute])
 ~~~
+![Single-node](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/single-node.jpg)
 
 ##### Multi-node_2nodes
 ~~~
 => odl......... (OpenDaylight node)
 => ctrl-comp1.. (Controller node [Controller + Network + Compute])
 ~~~
+![Multi-node_2nodes](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/multi-node_2nodes.jpg)
 
 ##### Multi-node_3nodes
 ~~~
@@ -133,6 +135,7 @@ $ resize
 => comp2....... (Compute node [Compute2])
 => comp3....... (Compute node [Compute3])
 ~~~
+![Multi-node_4nodes](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/multi-node_4nodes.jpg)
 
 
 ## Example topologies in OpenStack
