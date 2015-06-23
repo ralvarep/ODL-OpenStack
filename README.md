@@ -42,8 +42,7 @@ There are [several scenarios](https://github.com/ralvarep/odl-openstack#scenario
 ~~~
 $ sudo vnx -f SCENARIO_FILE.xml -t
 
- SCENARIO_FILE => single-node_with_externalODL
-               => single-node_with_internalODL
+ SCENARIO_FILE => single-node
                => multi-node_2nodes
                => multi-node_3nodes
                => multi-node_4nodes
@@ -108,14 +107,9 @@ $ resize
 
 ## Scenarios
 
-##### Single-node_with_externalODL
+##### Single-node (with_externalODL)
 ~~~
 => ctrl-comp1 (Controller node [Controller + Network + Compute])
-~~~
-
-##### Single-node_with_internallODL
-~~~
-=> ctrl-comp1 (OpenDaylight & Controller node [Controller + Network + Compute])
 ~~~
 
 ##### Multi-node_2nodes
