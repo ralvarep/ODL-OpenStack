@@ -107,7 +107,7 @@ $ resize
 
 ## Scenarios
 
-##### Single-node (with_externalODL)
+##### Single-node (with external OpenDaylight)
 ~~~
 => ctrl-comp1 (Controller node [Controller + Network + Compute])
 ~~~
