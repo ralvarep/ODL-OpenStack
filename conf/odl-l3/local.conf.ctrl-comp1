@@ -35,7 +35,7 @@ ENABLED_SERVICES+=,rabbit,mysql
 ENABLED_SERVICES+=,q-svc,q-dhcp,q-meta
 
 # Images (Cirros 0.3.4)
-#IMAGE_URLS="http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-uec.tar.gz"
+IMAGE_URLS="http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-uec.tar.gz"
 
 # VNC Server
 VNCSERVER_PROXYCLIENT_ADDRESS=$HOST_IP
