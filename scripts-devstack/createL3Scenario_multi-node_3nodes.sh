@@ -4,7 +4,7 @@ cd /home/vnx/devstack
 
 source openrc admin admin
 
-TENANT_ID=$(keystone tenant-list 2> /dev/null | grep '\s'demo'' | awk '{print $2}')
+TENANT_ID=$(keystone tenant-list 2> /dev/null | grep '\s'admin'' | awk '{print $2}')
 IMAGE_ID=$(nova image-list | grep 'cirros-0.3.4-x86_64-uec\s' | awk '{print $2}')
 
 neutron net-create NET1 --tenant-id $TENANT_ID --provider:network_type gre --provider:segmentation_id 101
@@ -20,6 +20,6 @@ neutron router-interface-add R1 SUBNET1
 neutron router-interface-add R1 SUBNET2
 
 nova boot VM-11 --poll --flavor m1.tiny --image $IMAGE_ID --nic net-id=${NET1_ID} --availability-zone nova:ctrl-comp1
-nova boot VM-12 --poll --flavor m1.tiny --image $IMAGE_ID --nic net-id=${NET1_ID} --availability-zone nova:ctrl-comp1
+nova boot VM-12 --poll --flavor m1.tiny --image $IMAGE_ID --nic net-id=${NET1_ID} --availability-zone nova:comp2
 nova boot VM-22 --poll --flavor m1.tiny --image $IMAGE_ID --nic net-id=${NET2_ID} --availability-zone nova:ctrl-comp1
-nova boot VM-22 --poll --flavor m1.tiny --image $IMAGE_ID --nic net-id=${NET2_ID} --availability-zone nova:ctrl-comp1
+nova boot VM-22 --poll --flavor m1.tiny --image $IMAGE_ID --nic net-id=${NET2_ID} --availability-zone nova:comp2

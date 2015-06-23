@@ -4,7 +4,7 @@ cd /home/vnx/devstack
 
 source openrc admin admin
 
-TENANT_ID=$(keystone tenant-list 2> /dev/null | grep '\s'demo'' | awk '{print $2}')
+TENANT_ID=$(keystone tenant-list 2> /dev/null | grep '\s'admin'' | awk '{print $2}')
 IMAGE_ID=$(nova image-list | grep 'cirros-0.3.4-x86_64-uec\s' | awk '{print $2}')
 
 neutron net-create NET1 --tenant-id $TENANT_ID --provider:network_type gre --provider:segmentation_id 101
