@@ -70,9 +70,7 @@ Keystone is serving at http://10.0.0.11:5000/
 The default users are: admin and demo
 The password: password
 ~~~
-...and you can test OpenDaylight and OpenStack ☺
-
-Horizon is avaible from host through [192.168.122.11](https://192.168.122.11).
+...and you can test OpenDaylight and OpenStack ☺. Horizon is avaible from host through [192.168.122.11](https://192.168.122.11).
 
 **OTHER OPTIONS:**
 
