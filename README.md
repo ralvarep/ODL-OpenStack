@@ -71,6 +71,7 @@ The default users are: admin and demo
 The password: password
 ~~~
 ...and you can test OpenDaylight and OpenStack ☺. 
+
 Horizon is avaible from host through [192.168.122.11](https://192.168.122.11).
 
 **OTHER OPTIONS:**
