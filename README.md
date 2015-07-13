@@ -163,3 +163,6 @@ This project has been developed by [Raúl Álvarez Pinilla](https://es.linkedin.
 
 ## References
 
+ *  [FlavioBlog](http://www.flaviof.com/blog/category/work.html)
+ * 
+ 
