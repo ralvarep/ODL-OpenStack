@@ -163,6 +163,10 @@ This project has been developed by [Raúl Álvarez Pinilla](https://es.linkedin.
 
 ## References
 
- *  [FlavioBlog](http://www.flaviof.com/blog/category/work.html)
- * 
+ *  [Flavio's Blog](http://www.flaviof.com/blog/category/work.html)
+ *  [Vthapar GitHub](https://github.com/vthapar/odl-openstack)
+ *  [Networking ODL](https://github.com/openstack/networking-odl)
+ *  [Ask OpenDayight](https://ask.opendaylight.org/questions/)
+ *  [DevStack](http://docs.openstack.org/developer/devstack/)
+
  
