@@ -1,0 +1,77 @@
+[[local|localrc]]
+
+# Prevent refreshing of dependencies and DevStack recloning
+OFFLINE=True
+RECLONE=No
+
+# Destination path for installation
+DEST=/opt/stack
+
+# Log Options
+LOGFILE=$DEST/logs/stack.sh.log
+SCREEN_LOGDIR=$DEST/logs/stack
+LOG_COLOR=True
+
+# Credentials
+ADMIN_PASSWORD=password
+MYSQL_PASSWORD=$ADMIN_PASSWORD
+RABBIT_PASSWORD=$ADMIN_PASSWORD
+SERVICE_PASSWORD=$ADMIN_PASSWORD
+SERVICE_TOKEN=token
+
+# IP Details
+HOST_IP=10.0.0.11
+HOST_NAME=ctrl-comp1
+SERVICE_HOST=$HOST_IP
+SERVICE_HOST_NAME=$HOST_NAME
+
+# Services
+disable_all_services
+ENABLED_SERVICES=key
+ENABLED_SERVICES+=,n-api,n-cpu,n-net,n-cond,n-sch,n-novnc,n-crt,n-cauth
+ENABLED_SERVICES+=,g-api,g-reg
+ENABLED_SERVICES+=,horizon
+ENABLED_SERVICES+=,rabbit,mysql
+ENABLED_SERVICES+=,q-svc,q-dhcp,q-meta
+
+# Images (Cirros 0.3.4)
+IMAGE_URLS="http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-uec.tar.gz"
+
+# VNC Server
+VNCSERVER_PROXYCLIENT_ADDRESS=$HOST_IP
+VNCSERVER_LISTEN=0.0.0.0
+NOVNCPROXY_URL="http://192.168.122.11:6080/vnc_auto.html"
+
+# Public Network
+FLOATING_RANGE=192.168.122.0/24
+PUBLIC_NETWORK_GATEWAY=192.168.122.1
+
+# Neutron
+NEUTRON_CREATE_INITIAL_NETWORKS=False
+Q_PLUGIN=ml2
+ENABLE_TENANT_TUNNELS=True
+Q_ML2_TENANT_NETWORK_TYPE=vxlan,gre
+#enable_plugin networking-odl http://git.openstack.org/openstack/networking-odl
+enable_plugin networking-odl https://github.com/flavio-fernandes/networking-odl helium
+
+# OpenDaylight
+ODL_MODE=externalodl
+ODL_MGR_IP=192.168.122.1
+ODL_MGR_PORT=6640
+ODL_USERNAME=admin
+ODL_PASSWORD=admin
+ODL_PORT=8080
+ODL_ENDPOINT="http://${ODL_MGR_IP}:${ODL_PORT}/controller/nb/v2/neutron"
+
+# L3-OpenDaylight
+disable_service q-l3
+Q_L3_ENABLED=True
+ODL_L3=True
+[[post-config|$NEUTRON_CONF]]
+[DEFAULT]
+service_plugins=networking_odl.l3.l3_odl.OpenDaylightL3RouterPlugin
+
+# ML2 Configuration
+[[post-config|/etc/neutron/plugins/ml2/ml2_conf.ini]]
+[agent]
+minimize_polling=True

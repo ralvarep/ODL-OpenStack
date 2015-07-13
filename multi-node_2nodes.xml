@@ -18,7 +18,7 @@ SPAIN
   xsi:noNamespaceSchemaLocation="/usr/share/xml/vnx/vnx-2.00.xsd">
   <global>
     <version>2.0</version>
-    <scenario_name>multi-node_4nodes</scenario_name>
+    <scenario_name>multi-node_2nodes</scenario_name>
     <automac/>
     <vm_mgmt type="none" />
     <vm_defaults>
@@ -85,10 +85,10 @@ SPAIN
     <filetree seq="conf-odl-l3" root="/home/vnx/devstack/local.conf" perms="644">conf/odl-l3/local.conf.ctrl-comp1</filetree>
 
     <!-- Copy DevStack L2 Scenario -->
-    <filetree seq="create-l2" root="/home/vnx/devstack/createL2Scenario.sh" perms="777">scripts-devstack/createL2Scenario_multi-node_4nodes.sh</filetree>
+    <filetree seq="create-l2" root="/home/vnx/devstack/createL2Scenario.sh" perms="777">scripts-devstack/createL2Scenario_nulti-nodes_2nodes.sh</filetree>
 
     <!-- Copy DevStack L3 Scenario -->
-    <filetree seq="create-l3" root="/home/vnx/devstack/createL3Scenario.sh" perms="777">scripts-devstack/createL3Scenario_multi-node_4nodes.sh</filetree>
+    <filetree seq="create-l3" root="/home/vnx/devstack/createL3Scenario.sh" perms="777">scripts-devstack/createL3Scenario_nulti-nodes_2nodes.sh</filetree>
 
     <!-- Start DevStack -->
     <exec seq="stack" type="verbatim" ostype="system">
@@ -108,70 +108,6 @@ SPAIN
     <!-- Create DevStack L3 Scenario-->
     <exec seq="create-l3" type="verbatim" ostype="system">
     	 /home/vnx/devstack/createL3Scenario.sh > /dev/ttyS0;
-    </exec>
-  </vm>
-
-
-  <!-- COMPUTE NODE (Compute2)-->
-  <vm name="comp2" type="libvirt" subtype="kvm" os="linux" exec_mode="sdisk" arch="x86_64" vcpu="8">
-    <filesystem type="cow">filesystems/devstack_odl_ovs_KILO.qcow2</filesystem>
-    <mem>2G</mem>
-    <if id="1" net="virbr0">
-      <ipv4>dhcp,192.168.122.12</ipv4>
-    </if>
-    <if id="2" net="internal">
-      <ipv4>10.0.0.12/24</ipv4>
-    </if>
-
-    <!-- Copy DevStack configuration (DevStack, without OpenDaylight)-->
-    <filetree seq="conf-no-odl" root="/home/vnx/devstack/local.conf" perms="644">conf/no-odl/local.conf.comp2</filetree>
-
-    <!-- Copy DevStack configuration (DevStack with OpenDaylight [L2 services])-->
-    <filetree seq="conf-odl-l2" root="/home/vnx/devstack/local.conf" perms="644">conf/odl-l2/local.conf.comp2</filetree>
-
-    <!-- Copy DevStack configuration (DevStack with OpenDaylight [L2 & L3 services])-->
-    <filetree seq="conf-odl-l3" root="/home/vnx/devstack/local.conf" perms="644">conf/odl-l3/local.conf.comp2</filetree>
-
-    <!-- Start DevStack -->
-    <exec seq="stack" type="verbatim" ostype="system">
-    	 su vnx -c "/home/vnx/devstack/stack.sh > /dev/ttyS0";
-    </exec>
-
-    <!-- Stop DevStack -->
-    <exec seq="unstack" type="verbatim" ostype="system">
-    	 su vnx -c "/home/vnx/devstack/unstack.sh > /dev/ttyS0";
-    </exec>
-  </vm>
-
-
-  <!-- COMPUTE NODE (Compute3)-->
-  <vm name="comp3" type="libvirt" subtype="kvm" os="linux" exec_mode="sdisk" arch="x86_64" vcpu="8">
-    <filesystem type="cow">filesystems/devstack_odl_ovs_KILO.qcow2</filesystem>
-    <mem>2G</mem>
-    <if id="1" net="virbr0">
-      <ipv4>dhcp,192.168.122.13</ipv4>
-    </if>
-    <if id="2" net="internal">
-      <ipv4>10.0.0.13/24</ipv4>
-    </if>
-
-    <!-- Copy DevStack configuration (DevStack, without OpenDaylight)-->
-    <filetree seq="conf-no-odl" root="/home/vnx/devstack/local.conf" perms="644">conf/no-odl/local.conf.comp3</filetree>
-
-    <!-- Copy DevStack configuration (DevStack with OpenDaylight [L2 services])-->
-    <filetree seq="conf-odl-l2" root="/home/vnx/devstack/local.conf" perms="644">conf/odl-l2/local.conf.comp3</filetree>
-
-    <!-- Copy DevStack configuration (DevStack with OpenDaylight [L2 & L3 services])-->
-    <filetree seq="conf-odl-l3" root="/home/vnx/devstack/local.conf" perms="644">conf/odl-l3/local.conf.comp3</filetree>
-
-    <!-- Start DevStack -->
-    <exec seq="stack" type="verbatim" ostype="system">
-    	 su vnx -c "/home/vnx/devstack/stack.sh > /dev/ttyS0";
-    </exec>
-
-    <!-- Stop DevStack -->
-    <exec seq="unstack" type="verbatim" ostype="system">
-    	 su vnx -c "/home/vnx/devstack/unstack.sh > /dev/ttyS0";
     </exec>
   </vm>
 
