@@ -142,6 +142,11 @@ $ resize
 
 ## Example topologies in OpenStack
 
+##### L2
+![L2](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/openstack-l2.jpg)
+
+##### L3
+![L3](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/openstack-l3.jpg)
 
 
 ## Notes
