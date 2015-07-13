@@ -142,6 +142,11 @@ $ resize
 
 ## Example topologies in OpenStack
 
+##### L2
+![L2](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/openstack-l2.jpg)
+
+##### L3
+![L3](https://raw.githubusercontent.com/ralvarep/odl-openstack/master/network_maps/openstack-l3.jpg)
 
 
 ## Notes
@@ -158,3 +163,10 @@ This project has been developed by [Raúl Álvarez Pinilla](https://es.linkedin.
 
 ## References
 
+ *  [Flavio's Blog](http://www.flaviof.com/blog/category/work.html)
+ *  [Vthapar GitHub](https://github.com/vthapar/odl-openstack)
+ *  [Networking ODL](https://github.com/openstack/networking-odl)
+ *  [Ask OpenDayight](https://ask.opendaylight.org/questions/)
+ *  [DevStack](http://docs.openstack.org/developer/devstack/)
+
+ 
