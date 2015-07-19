@@ -28,7 +28,7 @@ SERVICE_HOST_NAME=$HOST_NAME
 # Services
 disable_all_services
 ENABLED_SERVICES=key
-ENABLED_SERVICES+=,n-api,n-cpu,n-net,n-cond,n-sch,n-novnc,n-crt,n-cauth
+ENABLED_SERVICES+=,n-api,n-cpu,n-cond,n-sch,n-novnc,n-crt,n-cauth
 ENABLED_SERVICES+=,g-api,g-reg
 ENABLED_SERVICES+=,horizon
 ENABLED_SERVICES+=,rabbit,mysql
