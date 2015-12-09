@@ -33,6 +33,7 @@ B) CREATE ROOTFS MANUALLY
 		apt-get install autoconf automake build-essential debhelper dkms fakeroot graphviz ipsec-tools iputils-arping iputils-ping libssl-dev libtool module-assistant python-all python-qt4 python-twisted-conch python-twisted-web racoon
 		wget http://openvswitch.org/releases/openvswitch-2.3.1.tar.gz
 		tar xvf openvswitch-2.3.1.tar.gz 
+		cd openvswitch-2.3.1
 		DEB_BUILD_OPTIONS='nocheck' fakeroot debian/rules binary
 		sudo dpkg -i ../*.deb
 
